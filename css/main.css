@@ -1,0 +1,104 @@
+
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background-image: url("../images/pok1.jfif");
+}
+
+
+.container{
+    position: relative;
+    width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title{
+    display: inline-block;
+    color: #f00;
+    font-size: 50px;
+    margin: 40px auto;
+
+    padding: 15px 30px 10px;
+    background-color:rgb(187, 255, 0) ;
+    border-radius: 10px;
+    
+}
+
+.js-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.js-item
+{
+    width: 300px;
+    background-color: rgb(187, 255, 0);
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 80px;
+    padding: 20px;
+}
+
+.js-item:hover{
+   background-color: aquamarine;
+   cursor: pointer;
+}
+
+.js-item-id{
+    display: block;
+    font-size: 20px;
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.js-name{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.js-item-height{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.js-item-width{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.js-box{
+
+}
+.js-type-1{
+    display: inline-block;
+    margin: 0;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.js-type-2{
+    display: inline-block;
+    margin: 0;
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+}
+.js-img{
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
