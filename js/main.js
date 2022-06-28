@@ -3476,6 +3476,7 @@ var pokemons = [
 ];
 
 var elList = document.querySelector('.js-list');
+let res = [];
 
 for (item of pokemons) {
 	var newItem = document.createElement('li');
@@ -3519,4 +3520,89 @@ for (item of pokemons) {
 	weak2.classList.add('js-type-2');
 
 	elList.appendChild(newItem);
+
+
+
+
+	// make select 
+
+
+	for (let i = 0; i < item.type.length; i++) {
+		if (item.type[i] != null) {
+			res.push(item.type[i]);
+		}
+	}
 }
+
+
+// use the Set 
+
+const toplam = [...new Set(res)];
+
+var elSelect = document.querySelector('.js-select');
+
+for (let i = 0; i < toplam.length; i++) {
+	var newOption = document.createElement('option');
+	newOption.value = toplam[i];
+	newOption.textContent = toplam[i];
+	newOption.classList.add("js-option")
+	elSelect.appendChild(newOption);
+}
+
+let result = [];
+
+elSelect.addEventListener('change', function (evt) {
+	evt.preventDefault();
+	result = [];
+	elList.innerHTML = '';
+	let val = elSelect.value;
+	pokemons.forEach((element) => {
+		if (element.type.includes(val)) {
+			result.push(element);
+		}
+	});
+
+	for (item of result) {
+		var newItem = document.createElement('li');
+		var nameItem = document.createElement('p');
+		var idItem = document.createElement('span');
+		var heightItem = document.createElement('span');
+		var weightItem = document.createElement('span');
+		var img = document.createElement('img');
+		var weak1 = document.createElement('span');
+		var weak2 = document.createElement('span');
+		var weakBox = document.createElement('div');
+
+		nameItem.textContent = `${item.name}`;
+		idItem.textContent = `№ ${item.id}`;
+		heightItem.textContent = `${item.height}`;
+		weightItem.textContent = `${item.weight}`;
+		weak1.textContent = `${item.type[0]}`;
+		weakBox.appendChild(weak1);
+		if (item.type[1] != null) {
+			weak2.textContent = `${item.type[1]}`;
+			weakBox.appendChild(weak2);
+		}
+
+		img.src = `${item.img}`;
+
+		newItem.appendChild(idItem);
+		newItem.appendChild(img);
+		newItem.appendChild(nameItem);
+		newItem.appendChild(heightItem);
+		newItem.appendChild(weightItem);
+		newItem.appendChild(weakBox);
+
+		newItem.classList.add('js-item');
+		img.classList.add('js-img');
+		nameItem.classList.add('js-name');
+		idItem.classList.add('js-item-id');
+		heightItem.classList.add('js-item-height');
+		weightItem.classList.add('js-item-weight');
+		weakBox.classList.add('js-box');
+		weak1.classList.add('js-type-1');
+		weak2.classList.add('js-type-2');
+
+		elList.appendChild(newItem);
+	}
+});

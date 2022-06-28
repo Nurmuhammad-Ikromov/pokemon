@@ -16,7 +16,7 @@ body{
 }
 
 .title{
-    display: inline-block;
+    /* display: inline-block; */
     color: #f00;
     font-size: 50px;
     margin: 40px auto;
@@ -27,12 +27,22 @@ body{
     
 }
 
+
+.text{
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    margin-right: 100px;
+    
+}
 .js-list{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
+    margin-top: 30px;
     padding: 0;
 }
 
@@ -77,9 +87,7 @@ body{
     display: inline-block;
     margin-bottom: 20px;
 }
-.js-box{
 
-}
 .js-type-1{
     display: inline-block;
     margin: 0;
@@ -101,4 +109,19 @@ body{
 .js-img{
     margin-bottom: 10px;
     vertical-align: middle;
+}
+
+
+.js-select{
+    /* width: 100px; */
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+.js-option{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(227, 234, 34);
 }
